@@ -1115,462 +1115,466 @@
       },
       "events": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "Button1",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SceneVariableChildCount"
-              },
-              "parameters": [
-                "List",
-                ">",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "NewText1",
-                "Text",
-                "+",
-                "List[Random(VariableChildCount(List)-1)]  + NewLine()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "Button2",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SceneVariableChildCount"
-              },
-              "parameters": [
-                "List",
-                ">",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "RandomNumber",
-                "=",
-                "Random(VariableChildCount(List)-1)"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "NewText2",
-                "Text",
-                "+",
-                "List[RandomNumber]  + NewLine()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SceneVariableRemoveAt"
-              },
-              "parameters": [
-                "List",
-                "RandomNumber"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "Button3",
-                ""
-              ]
-            }
-          ],
-          "actions": [],
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "pick a random metal",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableChildCount"
-                  },
-                  "parameters": [
-                    "List",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SceneVariablePushString"
-                  },
-                  "parameters": [
-                    "List",
-                    "\"Gold\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SceneVariablePushString"
-                  },
-                  "parameters": [
-                    "List",
-                    "\"Silver\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SceneVariablePushString"
-                  },
-                  "parameters": [
-                    "List",
-                    "\"Bronze\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "RandomNumber",
-                    "=",
-                    "Random(VariableChildCount(List)-1)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "NewText3",
-                    "Text",
-                    "+",
-                    "List[RandomNumber]  + NewLine()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SceneVariableRemoveAt"
-                  },
-                  "parameters": [
-                    "List",
-                    "RandomNumber"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "Button4",
-                ""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableChildCount"
-                  },
-                  "parameters": [
-                    "List",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "JSONToVariableStructure"
-                  },
-                  "parameters": [
-                    "ToJSON(CopyOfList)",
-                    "List"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "RandomNumber",
-                    "=",
-                    "Random(VariableChildCount(List)-1)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "NewText4",
-                    "Text",
-                    "+",
-                    "List[RandomNumber]  + NewLine()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SceneVariableRemoveAt"
-                  },
-                  "parameters": [
-                    "List",
-                    "RandomNumber"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-              },
-              "parameters": [
-                "Button5",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SceneVariableChildCount"
-              },
-              "parameters": [
-                "List",
-                ">",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "RandomNumber",
-                "=",
-                "Random(10)"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "RandomNumber",
-                    "<",
-                    "VariableChildCount(List)"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "NewText5",
-                    "Text",
-                    "+",
-                    "List[RandomNumber]  + NewLine()"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "RandomNumber",
-                    ">=",
-                    "VariableChildCount(List)"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "NewText5",
-                    "Text",
-                    "+",
-                    "\"Nothing-\" + RandomNumber  + NewLine()"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Or"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                },
                 {
                   "type": {
                     "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
                   },
                   "parameters": [
-                    "ButtonGroup",
+                    "Button1",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableChildCount"
+                  },
+                  "parameters": [
+                    "List",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "NewText1",
+                    "Text",
+                    "+",
+                    "List[Random(VariableChildCount(List)-1)]  + NewLine()"
                   ]
                 }
               ]
             }
           ],
-          "actions": [
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "pick a random metal and remove it",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "NewText",
-                "Text",
-                "=",
-                "\"List Array\" + NewLine()"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "Button2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableChildCount"
+                  },
+                  "parameters": [
+                    "List",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "RandomNumber",
+                    "=",
+                    "Random(VariableChildCount(List)-1)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "NewText2",
+                    "Text",
+                    "+",
+                    "List[RandomNumber]  + NewLine()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableRemoveAt"
+                  },
+                  "parameters": [
+                    "List",
+                    "RandomNumber"
+                  ]
+                }
               ]
             }
           ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "pick a random metal, remove it and refill",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::ForEachChildVariable",
-              "iterableVariableName": "List",
-              "valueIteratorVariableName": "Child",
-              "keyIteratorVariableName": "",
-              "conditions": [],
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "Button3",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableChildCount"
+                      },
+                      "parameters": [
+                        "List",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SceneVariablePushString"
+                      },
+                      "parameters": [
+                        "List",
+                        "\"Gold\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariablePushString"
+                      },
+                      "parameters": [
+                        "List",
+                        "\"Silver\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariablePushString"
+                      },
+                      "parameters": [
+                        "List",
+                        "\"Bronze\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "RandomNumber",
+                        "=",
+                        "Random(VariableChildCount(List)-1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "NewText3",
+                        "Text",
+                        "+",
+                        "List[RandomNumber]  + NewLine()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableRemoveAt"
+                      },
+                      "parameters": [
+                        "List",
+                        "RandomNumber"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "pick a random metal, remove it and refill from copy of the list",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "Button4",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableChildCount"
+                      },
+                      "parameters": [
+                        "List",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure"
+                      },
+                      "parameters": [
+                        "ToJSON(CopyOfList)",
+                        "List"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "RandomNumber",
+                        "=",
+                        "Random(VariableChildCount(List)-1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "NewText4",
+                        "Text",
+                        "+",
+                        "List[RandomNumber]  + NewLine()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableRemoveAt"
+                      },
+                      "parameters": [
+                        "List",
+                        "RandomNumber"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "pick a random metal with some chance of getting nothing",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "Button5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneVariableChildCount"
+                  },
+                  "parameters": [
+                    "List",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "RandomNumber",
+                    "=",
+                    "Random(10)"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "RandomNumber",
+                        "<",
+                        "VariableChildCount(List)"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "NewText5",
+                        "Text",
+                        "+",
+                        "List[RandomNumber]  + NewLine()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "RandomNumber",
+                        ">=",
+                        "VariableChildCount(List)"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "NewText5",
+                        "Text",
+                        "+",
+                        "\"Nothing-\" + RandomNumber  + NewLine()"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "display the contents of the list array",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "ButtonGroup",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -1579,13 +1583,36 @@
                   "parameters": [
                     "NewText",
                     "Text",
-                    "+",
-                    "Child + NewLine()"
+                    "=",
+                    "\"List Array\" + NewLine()"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEachChildVariable",
+                  "iterableVariableName": "List",
+                  "valueIteratorVariableName": "Child",
+                  "keyIteratorVariableName": "",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "NewText",
+                        "Text",
+                        "+",
+                        "Child + NewLine()"
+                      ]
+                    }
                   ]
                 }
               ]
             }
-          ]
+          ],
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
